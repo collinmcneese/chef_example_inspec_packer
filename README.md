@@ -4,10 +4,11 @@ Repository showing simple use case for using Packer to build an image with Chef 
 
 ```plain
 ├── cookbooks
-│   └── packer_build
+│   └── packer_build_nginx
 ├── templates
+│   └── ubuntu_20-04_nginx.pkr.hcl
 └── test
-    └── packer_check
+    └── packer_check_nginx
 ```
 
 ## Usage
