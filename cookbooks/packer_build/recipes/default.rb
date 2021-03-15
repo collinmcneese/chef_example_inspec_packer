@@ -18,3 +18,9 @@ end
 service 'nginx' do
   action [ :start, :enable ]
 end
+
+user 'someuser'
+
+group 'somegroup' do
+  members 'someuser'
+end

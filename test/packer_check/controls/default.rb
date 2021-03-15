@@ -34,6 +34,12 @@ control 'build_user_check' do
   describe group('ubuntu') do
     it { should exist }
   end
+
+  # http://inspec.io/docs/reference/resources/group/
+  describe group('somegroup') do
+    it { should exist }
+    its('members') { should include 'someuser' }
+  end
 end
 
 control 'build_service_check' do
