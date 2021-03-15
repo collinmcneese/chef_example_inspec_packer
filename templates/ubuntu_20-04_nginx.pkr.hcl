@@ -44,11 +44,11 @@ build {
   provisioner "chef-solo" {
     cookbook_paths = ["cookbooks"]
     chef_license   = "accept-no-persist"
-    run_list       = ["recipe[packer_build]"]
+    run_list       = ["recipe[packer_build_nginx]"]
   }
 
   provisioner "inspec" {
-    profile = "./test/packer_check"
+    profile = "./test/packer_check_nginx"
   }
 }
 

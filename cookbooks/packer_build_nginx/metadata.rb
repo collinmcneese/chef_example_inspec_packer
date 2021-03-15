@@ -1,4 +1,4 @@
-name 'packer_build'
+name 'packer_build_nginx'
 maintainer 'The Authors'
 maintainer_email 'you@example.com'
 license 'All Rights Reserved'

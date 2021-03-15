@@ -20,6 +20,10 @@ Build an image from this repository with Packer:
 
 Packer template files are located under the `templates` directory within this repository.  These files assume usage of AWS for building an AMI image and expect input of an `AWS_PROFILE` variable for authentication.
 
+Example build passing the `AWS_PROFILE` attribute inline:
+
+`PKR_VAR_AWS_PROFILE='some-profile-name' packer build templates`
+
 ## Cookbooks
 
 The Packer template files in this repository use Chef Infra Client cookbooks for configuration provisioning of the images.  Cookbooks which are used by this build are referenced in `provisioner` configurations within template files and are stored locally under the `cookbooks` directory in this repository.
