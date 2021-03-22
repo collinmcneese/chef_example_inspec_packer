@@ -44,11 +44,24 @@ build {
   provisioner "chef-solo" {
     cookbook_paths = ["cookbooks"]
     chef_license   = "accept-no-persist"
-    run_list       = ["recipe[packer_build_nginx]"]
+    run_list       = [
+      "recipe[ssh_hardening]",
+      "recipe[packer_build_nginx]"
+      ]
   }
 
+  # https://www.packer.io/docs/provisioners/inspec
   provisioner "inspec" {
     profile = "./test/packer_check_nginx"
+    extra_arguments = [
+      "--no-distinct-exit"
+    ]
+  }
+  provisioner "inspec" {
+    profile = "./test/ssh_baseline"
+    extra_arguments = [
+      "--no-distinct-exit"
+    ]
   }
 }
 

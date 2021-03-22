@@ -1,0 +1,14 @@
+name: ssh_baseline
+title: Wrapper profile for dev-sec ssh baseline.
+maintainer: Collin McNeese
+copyright: Collin McNeese
+copyright_email: cmcneese@chef.io
+license: Apache-2.0
+summary: An InSpec Compliance Profile
+version: 0.1.0
+supports:
+  platform: unix
+
+depends:
+  - name: ssh-baseline
+    git: https://github.com/dev-sec/ssh-baseline
