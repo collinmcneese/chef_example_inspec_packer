@@ -2,6 +2,9 @@
 
 Repository showing simple use case for using Packer to build an image with Chef Infra Client cookbook provisioning and Chef Inspec testing.
 
+* [Packer Inspec Provisioner](https://www.packer.io/docs/provisioners/inspec)
+* [Packer Chef-Solo Provisioner](https://www.packer.io/docs/provisioners/chef-solo)
+
 ```plain
 ├── cookbooks
 │   └── packer_build_nginx
