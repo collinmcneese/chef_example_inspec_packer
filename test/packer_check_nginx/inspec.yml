@@ -2,7 +2,7 @@ name: packer_check_nginx
 title: InSpec Profile to validate Packer build of nginx template
 maintainer: Collin McNeese
 copyright: Collin McNeese
-copyright_email: cmcneese@chef.io
+copyright_email: collin@mydevsandbox.com
 license: Apache-2.0
 summary: |
   Performs validation that all components are properly configured for nginx template.
